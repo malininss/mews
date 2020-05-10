@@ -120,7 +120,7 @@ footer {
 
 .footer__developers {
   background-color: #000;
-  height: 40px;
+  min-height: 40px;
   text-align: center;
   line-height: 40px;
   font-size: 22px;
@@ -168,6 +168,9 @@ footer {
 .main-header {
   display: flex;
   justify-content: space-between; }
+
+.main-header__mobile-phone {
+  display: none; }
 
 .main-header__burger-wrapper {
   display: none; }
@@ -359,7 +362,7 @@ footer {
   .main-header__burger {
     width: 25px;
     height: 3px;
-    background: #383838;
+    background: #05A099;
     position: relative;
     margin-top: 6px; }
     .main-header__burger:before {
@@ -370,7 +373,7 @@ footer {
       z-index: -10;
       width: 25px;
       height: 3px;
-      background: #383838; }
+      background: #05A099; }
     .main-header__burger:after {
       content: '';
       top: 6px;
@@ -378,7 +381,7 @@ footer {
       position: absolute;
       width: 25px;
       height: 3px;
-      background: #383838; }
+      background: #05A099; }
   .footer__logo img {
     width: 90px;
     height: auto; }
@@ -390,12 +393,57 @@ footer {
     .horsemanship__card:not(:last-child) {
       margin-right: 0px; }
     .horsemanship__card:nth-child(odd) {
+      margin-right: 20px; }
+  .news__cards {
+    flex-wrap: wrap; }
+  .news__card {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+    height: 50%; }
+    .news__card:not(:last-child) {
+      margin-right: 0px; }
+    .news__card:nth-child(odd) {
       margin-right: 20px; } }
 
 @media (max-width: 767px) {
   h1 {
     font-size: 38px;
     line-height: 40px; }
+  h2 {
+    font-size: 32px;
+    line-height: 34px;
+    margin-top: 20px; }
+  h4 {
+    font-size: 20px;
+    line-height: 22px; }
+  .serif-text {
+    font-size: 16px;
+    line-height: 22px; }
+  .regular-text {
+    font-size: 14px;
+    line-height: 20px; }
+  .footer__block {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px; }
+  .footer__menu, .footer__contacts, .footer__social {
+    font-size: 18px; }
+  .footer__contacts-adress:before {
+    display: none; }
+  .footer__wrapper {
+    flex-direction: column; }
+  .footer_social-logoes {
+    justify-content: space-around; }
+  .footer__menu nav {
+    justify-content: space-around; }
+  .main-header__logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0); }
+    .main-header__logo img {
+      width: 60px; }
+  .main-header__phone {
+    font-size: 14px; }
   .main-first-screen {
     height: 660px; }
   .horse-background {
@@ -405,9 +453,31 @@ footer {
     flex-basis: 100%; }
     .horsemanship__card:nth-child(odd) {
       margin-right: 0; }
+    .horsemanship__card:hover {
+      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 0; }
   .stables-healing__card {
     flex-wrap: wrap; }
   .stables-healing__pic, .stables-healing__description {
     width: 100%; }
   .stables-healing__description {
-    order: 2; } }
+    order: 2; }
+  .stables-healing__title {
+    margin-top: 0; }
+  .under-gallery-description {
+    flex-wrap: wrap; }
+  .under-gallery-description__block {
+    margin-bottom: 20px;
+    width: 100%; }
+    .under-gallery-description__block:first-child {
+      margin-right: 0; } }
+
+@media (max-width: 480px) {
+  .main-header__phone {
+    display: none; }
+  .main-header__mobile-phone {
+    display: block;
+    width: 25px;
+    height: auto; }
+    .main-header__mobile-phone img {
+      fill: #05A099; } }
