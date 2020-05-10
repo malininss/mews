@@ -1,3 +1,10 @@
+$turquoise-color: #05A099;
+$turquoise-active-color: #028e88;
+$black-color: #383838;
+$grey-color: #848484;
+$strong-grey-color: #363636;
+$light-grey-color: #F6F6F6;
+
 @font-face {
   font-family: "playfair";
   src: url("fonts/Playfairdisplayregular.woff2") format("woff2"),
@@ -17,15 +24,16 @@
 body {
   position: relative;
   min-height: 100vh;
+  color: $black-color;
 }
 
 a {
   text-decoration: none;
-  color: #000;
-}
-
-a:hover {
-  color: #05A099;
+  color: $black-color;
+  
+  &:hover {
+    color: $turquoise-active-color;
+  }
 }
 
 h1, h2, .serif-text {
@@ -46,34 +54,34 @@ h2 {
 
 h4 {
   font-size: 24px;
-  color: #05A099;
+  color: $turquoise-color;
   margin-top: 15px;
   margin-bottom: 20px;
 }
 
 .grey-text {
-  color: #848484;
+  color: $grey-color;
 }
 
 .regular-text {
   font-size: 18px;
-  color: #383838;
+  color: $black-color;
 }
 
 .main-bottom {
   font-size: 22px;
   color: #fff;
-  background: #05A099;
+  background: $turquoise-color;
   padding: 14px 30px;
   border-radius: 30px;
   margin-top: 40px;
+
+  &:hover {
+    color: #fff;
+    background: $turquoise-active-color;
+  }
 }
 
-/* Исправить цвет ховера */
-.main-bottom:hover {
-  color: #fff;
-  background: #028e88;
-}
 
 .wrapper {
   max-width: 1400px;
@@ -88,12 +96,12 @@ h4 {
 
 .banner__img {
   height: 420px;
-  background-color: lightgray;
+  background-color: $grey-color;
 }
 
 
 footer { 
-  background-color: #363636;
+  background-color: $strong-grey-color;
 }
 
 
@@ -113,39 +121,43 @@ footer {
 
 
 .footer__contacts-adress {
-  color: #05A099;
+  color: $turquoise-color;
   margin-bottom: 28px;
   position: relative;
-}
 
-.footer__contacts-adress::before {
-  display: block;
-  content: '';
-  position: absolute;
-  left: -44px;
-  top: 4px;
-  background-image: url(src/marker.svg);
-  height: 43px;
-  width: 29px;
-}
-
-.footer__menu nav {
-  display: flex;
-  list-style-type: none;
-}
-
-.footer__menu ul:first-child {
-  margin-right: 40px;
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -44px;
+    top: 4px;
+    background-image: url(../img/marker.svg);
+    height: 43px;
+    width: 29px;
+  }
 }
 
 
-.footer__menu li {
-  list-style-type: none;
+.footer__menu {
+
+  nav {
+    display: flex;
+    list-style-type: none;
+  }
+
+  ul:first-child {
+    margin-right: 40px;
+  }
+  
+  li {
+    list-style-type: none;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
 
-.footer__menu li:not(:last-child) {
-  margin-bottom: 30px;
-}
 
 .footer__social-text {
   margin-bottom: 33px;
@@ -162,13 +174,53 @@ footer {
   text-align: center;
   line-height: 40px;
   font-size: 22px;
-  color: #05A099;
+  color: $turquoise-color;
+}
+
+.mobile-header__menu {
+  position: fixed;
+  width: 200px;
+  height: 100vh;
+  background: #fff;
+  z-index: 1000;
+  left: -220px;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4);
+  transition: left 0.5s;
+
+  &.active {
+    display: block;
+    left: 0;    }
+
+  a {
+    display: block;
+    font-size: 18px;
+    padding: 10px 20px;
+
+    &:first-child {
+      padding-top: 20px;
+    }
+
+    &.active {
+      color: $turquoise-color;
+    }
+  }
 }
 
 
+.mobile-header__background {
+  
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  opacity: 0.7;
+  position: fixed;
+  z-index: 900;
 
-
-
+  &.active {
+    display: block;
+  }
+}
 
 
 
@@ -186,6 +238,19 @@ footer {
   justify-content: space-between;
 }
 
+.main-header__burger-wrapper {
+  display: none;
+}
+
+.main-header__logo {
+  margin-left: -18px;
+
+  img {
+    width: 135px;
+    height: auto;
+  }
+}
+
 
 .main-header__left-menu {
   display: flex;
@@ -193,17 +258,24 @@ footer {
   font-size: 18px;
 }
 
-.main-header__menu a {
-  margin-left: 40px;
+.main-header__menu {
+  margin-top: 10px;
+
+  a {
+    margin-left: 40px;
+    
+    &.active {
+      color: $turquoise-active-color;
+    }
+  }
+
 }
 
-.main-header__menu a.active {
-  color: #05A099;
-}
 
 .main-header__phone{
   font-size: 24px;
-  color: #05A099;
+  color: $turquoise-color;
+  margin-top: 10px;
 }
 
 .main-header__head-phone{
@@ -218,16 +290,16 @@ footer {
   position: absolute;
   height: 100vh;
   min-height: 800px;
-}
 
-.horse-background img {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  max-width: 1300px;
-  transform: translate(-50%, 0);
-  left: 50%;
+  img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 1220px;
+    transform: translate(-50%, 0);
+    left: 50%;
+  }
 }
 
 .block__description {
@@ -235,7 +307,6 @@ footer {
   text-align: center;
   margin: 0 auto;
 }
-
 
 .main-banner__message {
   max-width: 600px;
@@ -251,22 +322,23 @@ footer {
 
 .horsemanship__card {
   border-radius: 30px;;
-  height: 370px;
+  height: 380px;
   text-align: center;
   padding: 40px 20px;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.5s;
+  transition: box-shadow 0.5s, margin-top 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    margin-top: -10px;
+    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 
-.horsemanship__card:hover {
-  cursor: pointer;
-  margin-top: -10px;
-  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4);
-}
-
-.horsemanship__card:not(:last-child) {
-  margin-right: 20px;
-}
 
 .horsemanship__cards-text {
   text-align: justify;
@@ -274,7 +346,7 @@ footer {
 
 .stables-healing__card {
   display: flex;
-  background-color: #F6F6F6;
+  background-color: $light-grey-color;
 }
 
 .stables-healing__pic,
@@ -282,9 +354,14 @@ footer {
   width: 50%;
 }
 
-.stables-healing__pic img {
-  max-width: 100%;
-  display: block;
+.stables-healing__pic {
+  display: flex;
+
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+  }
 }
 
 .stables-healing__description {
@@ -293,7 +370,7 @@ footer {
 }
 
 .stables-healing__title {
-  color: #05A099;
+  color: $turquoise-color;
 }
 
 .gallery {
@@ -323,10 +400,10 @@ footer {
 .gallery__prev-pic {
   height: 186px;
   overflow: hidden;
-}
 
-.gallery__prev-pic img {
-  width: 310px;
+  img {
+    width: 310px;
+  }
 }
 
 .under-gallery-description {
@@ -335,38 +412,36 @@ footer {
 
 .under-gallery-description__block {
   width: 50%;
-}
 
-.under-gallery-description__block:first-child {
-  margin-right: 40px;
+  &:first-child {
+    margin-right: 40px;
+  }
 }
 
 .under-gallery-description__text-list {
   display: flex;
   justify-content: space-between;
-}
 
-.under-gallery-description__text-list li {
-  margin-left: 18px;
+  li {
+    margin-left: 18px;
+  }
 }
-
 
 .map {
-  background-color: #F6F6F6;
-}
+  background-color: $light-grey-color;
 
-.map h2 {
-  padding: 40px 0 20px 0;
+  h2 {
+    padding: 40px 0 20px 0;
+  }
 }
 
 .map__img {
   margin: 0 auto;
   max-width: 1000px;
 
-}
-
-.map__img img{
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 .news__cards {
@@ -376,10 +451,10 @@ footer {
 .news__card {
   height: 370px;
   text-align: center;
-}
 
-.news__card:not(:last-child) {
-  margin-right: 40px;
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .news__cards-text {
@@ -393,4 +468,129 @@ footer {
 
 .news__date {
   margin: 20px 0;
+}
+
+
+
+
+
+/* Portrait tablets and small desktops */
+@media (max-width: 991px) {
+
+  h1 {
+    font-size: 50px;
+    line-height: 52px;
+  }
+
+  .main-header__menu {
+    display: none;
+  }
+
+  .main-header__phone {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .main-header__logo {
+
+    position: absolute;
+    margin: 0;
+    img {
+      width: 100px;
+    }
+  }
+
+  .main-header {
+    height: 120px;
+  }
+
+  .main-header__burger-wrapper {
+    cursor: pointer;
+    display: block;
+  }
+
+  .main-header__burger {
+    width: 25px;
+    height: 3px;
+    background: $black-color;
+    position: relative;
+    margin-top: 6px;
+
+    &:before {
+      content: '';
+      top: -6px;
+      display: block;
+      position: absolute;
+      z-index: -10;
+      width: 25px;
+      height: 3px;
+      background: $black-color;
+    }
+
+    &:after {
+      content: '';
+      top: 6px;
+      display: block;
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      background: $black-color;
+    }
+  }
+
+  .footer__logo {
+    img {
+      width: 90px;
+      height: auto;
+    }
+  }
+
+
+  .horsemanship__cards {
+    flex-wrap: wrap;
+  }
+
+  .horsemanship__card {
+    flex-basis: calc(50% - 10px);
+    margin-bottom: 20px;
+
+    &:not(:last-child) {
+      margin-right: 0px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 20px;
+    }
+  }
+
+
+
+
+}
+
+
+
+@media (max-width: 767px) {
+
+
+  .horsemanship__card {
+    flex-basis: 100%;
+
+    &:nth-child(odd) {
+      margin-right: 0
+    }
+  }
+
+  .stables-healing__card {
+    flex-wrap: wrap;
+  }
+
+  .stables-healing__pic, .stables-healing__description {
+    width: 100%;
+  }
+
+  .stables-healing__description {
+    order: 2;
+  }
+
 }
