@@ -393,6 +393,14 @@ footer {
       margin-right: 20px; } }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 38px;
+    line-height: 40px; }
+  .main-first-screen {
+    height: 660px; }
+  .horse-background {
+    min-height: 0;
+    height: 660px; }
   .horsemanship__card {
     flex-basis: 100%; }
     .horsemanship__card:nth-child(odd) {
