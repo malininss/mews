@@ -105,6 +105,28 @@ h4 {
   padding: 14px 30px;
   border-radius: 30px;
 
+  &::after {
+    display: none;
+  }
+
+  &:hover {
+    color: #fff;
+    background: $turquoise-active-color;
+  }
+}
+
+.sub-buttom {
+  font-size: 22px;
+  color: $turquoise-color;
+  background: #fff;
+  border: 1px solid $turquoise-color;
+  padding: 14px 30px;
+  border-radius: 30px;
+
+  &::after {
+    display: none;
+  }
+  
   &:hover {
     color: #fff;
     background: $turquoise-active-color;
@@ -414,10 +436,11 @@ footer {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 0 auto;
 
-  &.left-desc {
-    margin-left: auto;
-  }
+  // &.left-desc {
+  //   margin-left: auto;
+  // }
 
   h2 {
     margin-top: -40px;  
@@ -776,16 +799,16 @@ footer {
     width: 100%;
   }
 
-  .stables-healing__description-wrap {
+  // .stables-healing__description-wrap {
     
-    &.right-desc {
-      margin: 0 auto;
-    }
+  //   &.right-desc {
+  //     margin: 0 auto;
+  //   }
 
-    &.left-desc {
-      margin: 0 auto;
-    }
-  }
+  //   &.left-desc {
+  //     margin: 0 auto;
+  //   }
+  // }
 
   .stables-healing__description {
     order: 2;

@@ -71,7 +71,22 @@ h4 {
   background: #05A099;
   padding: 14px 30px;
   border-radius: 30px; }
+  .main-bottom::after {
+    display: none; }
   .main-bottom:hover {
+    color: #fff;
+    background: #028e88; }
+
+.sub-buttom {
+  font-size: 22px;
+  color: #05A099;
+  background: #fff;
+  border: 1px solid #05A099;
+  padding: 14px 30px;
+  border-radius: 30px; }
+  .sub-buttom::after {
+    display: none; }
+  .sub-buttom:hover {
     color: #fff;
     background: #028e88; }
 
@@ -284,9 +299,8 @@ footer {
   height: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column; }
-  .stables-healing__description-wrap.left-desc {
-    margin-left: auto; }
+  flex-direction: column;
+  margin: 0 auto; }
   .stables-healing__description-wrap h2 {
     margin-top: -40px; }
 
@@ -497,10 +511,6 @@ footer {
     max-height: none; }
   .stables-healing__pic, .stables-healing__description {
     width: 100%; }
-  .stables-healing__description-wrap.right-desc {
-    margin: 0 auto; }
-  .stables-healing__description-wrap.left-desc {
-    margin: 0 auto; }
   .stables-healing__description {
     order: 2; }
   .stables-healing__title {
