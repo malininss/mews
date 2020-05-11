@@ -1,6 +1,7 @@
+@charset "UTF-8";
 @font-face {
   font-family: "playfair";
-  src: url("fonts/Playfairdisplayregular.woff2") format("woff2"), url("fonts/Playfairdisplayregular.woff") format("woff");
+  src: url("../fonts/Playfairdisplayregular.woff2") format("woff2"), url("../fonts/Playfairdisplayregular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
@@ -16,9 +17,25 @@ body {
   color: #383838; }
 
 a {
+  display: inline-block;
   text-decoration: none;
-  color: #383838; }
+  padding-top: 10px;
+  color: #05A099;
+  position: relative; }
   a:hover {
+    color: #028e88; }
+  a:after {
+    display: block;
+    position: absolute;
+    content: '→';
+    right: -20px;
+    top: 8px; }
+
+a.menu-link {
+  color: #383838; }
+  a.menu-link::after {
+    display: none; }
+  a.menu-link:hover {
     color: #028e88; }
 
 h1, h2, .serif-text {
@@ -44,7 +61,8 @@ h4 {
   color: #848484; }
 
 .regular-text {
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 20px;
   color: #383838; }
 
 .main-bottom {
@@ -52,19 +70,22 @@ h4 {
   color: #fff;
   background: #05A099;
   padding: 14px 30px;
-  border-radius: 30px;
-  margin-top: 40px; }
+  border-radius: 30px; }
   .main-bottom:hover {
     color: #fff;
     background: #028e88; }
 
 .wrapper {
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   padding: 20px; }
 
+.center-block {
+  margin-top: 20px;
+  text-align: center; }
+
 .serif-text {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 20px; }
 
 .banner__img {
@@ -232,29 +253,42 @@ footer {
   display: flex; }
 
 .horsemanship__card {
-  border-radius: 30px;
-  height: 380px;
   text-align: center;
-  padding: 40px 20px;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.5s, margin-top 0.5s; }
+  padding: 40px 20px 20px 20px; }
+  .horsemanship__card img {
+    height: 92px;
+    width: auto; }
   .horsemanship__card:hover {
-    cursor: pointer;
-    margin-top: -10px;
-    box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4); }
+    cursor: pointer; }
   .horsemanship__card:not(:last-child) {
     margin-right: 20px; }
 
 .horsemanship__cards-text {
   text-align: justify; }
 
+.stables-healing {
+  max-width: 1920px;
+  margin: 0 auto; }
+
 .stables-healing__card {
   display: flex;
-  background-color: #F6F6F6; }
+  background-color: #F6F6F6;
+  max-height: 450px; }
 
 .stables-healing__pic,
 .stables-healing__description {
   width: 50%; }
+
+.stables-healing__description-wrap {
+  max-width: 590px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .stables-healing__description-wrap.left-desc {
+    margin-left: auto; }
+  .stables-healing__description-wrap h2 {
+    margin-top: -40px; }
 
 .stables-healing__pic {
   display: flex; }
@@ -312,7 +346,7 @@ footer {
 .map {
   background-color: #F6F6F6; }
   .map h2 {
-    padding: 40px 0 20px 0; }
+    padding-top: 40px; }
 
 .map__img {
   margin: 0 auto;
@@ -344,6 +378,9 @@ footer {
   h1 {
     font-size: 50px;
     line-height: 52px; }
+  h2 {
+    font-size: 34px;
+    line-height: 36px; }
   .main-header__menu {
     display: none; }
   .main-header__phone {
@@ -403,7 +440,9 @@ footer {
     .news__card:not(:last-child) {
       margin-right: 0px; }
     .news__card:nth-child(odd) {
-      margin-right: 20px; } }
+      margin-right: 20px; }
+  h2.stables-healing__title {
+    margin-top: 0; } }
 
 @media (max-width: 767px) {
   h1 {
@@ -450,16 +489,18 @@ footer {
     min-height: 0;
     height: 660px; }
   .horsemanship__card {
-    flex-basis: 100%; }
+    padding: 0; }
     .horsemanship__card:nth-child(odd) {
-      margin-right: 0; }
-    .horsemanship__card:hover {
-      box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
-      margin-top: 0; }
+      margin-right: 20px; }
   .stables-healing__card {
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    max-height: none; }
   .stables-healing__pic, .stables-healing__description {
     width: 100%; }
+  .stables-healing__description-wrap.right-desc {
+    margin: 0 auto; }
+  .stables-healing__description-wrap.left-desc {
+    margin: 0 auto; }
   .stables-healing__description {
     order: 2; }
   .stables-healing__title {
