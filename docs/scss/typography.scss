@@ -1,0 +1,17 @@
+$turquoise-color: #05A099;
+$turquoise-active-color: #028e88;
+$black-color: #383838;
+$grey-color: #848484;
+$strong-grey-color: #363636;
+$light-grey-color: #F6F6F6;
+
+$main-margin-top: 40px;
+$main-margin-bottom: 40px;
+
+@font-face {
+  font-family: "playfair";
+  src: url("../fonts/Playfairdisplayregular.woff2") format("woff2"),
+  url("../fonts/Playfairdisplayregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

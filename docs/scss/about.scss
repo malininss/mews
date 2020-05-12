@@ -1,0 +1,46 @@
+@import 'typography.scss';
+
+.we-have__list {
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  
+    li {
+      margin-left: 20px;
+      color: $turquoise-color
+    }
+  
+    a {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    margin-bottom: 40px; 
+  }
+  
+  .service-banner__banner {
+    height: 247px;
+    background: linear-gradient(45deg, #f8a2615c, #000000eb), url(../img/stable.png) 0 40% no-repeat;
+    position: relative;
+  
+    .main-bottom {
+      position: absolute;
+      right: 95px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+  
+  .service-banner__text {
+    color: #fff;
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 95px;
+    transform: translate(0, -50%);
+  
+    h2 {
+      margin: 0;
+    }
+  }

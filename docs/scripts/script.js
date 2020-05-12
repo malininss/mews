@@ -1,16 +1,16 @@
-const burgerMenu = document.querySelector('.main-header__burger-wrapper');
+const burgerMenu = document.querySelector('.header__burger-wrapper');
 const mobileMenu = document.querySelector('.mobile-header__menu');
 const mobileBackground = document.querySelector('.mobile-header__background');
 
 
 burgerMenu.addEventListener('click', () => {
-  mobileMenu.classList.add('active');
-  mobileBackground.classList.add('active');
+  mobileMenu.classList.add('mobile-header__menu_active');
+  mobileBackground.classList.add('mobile-header__background_active');
 });
 
 mobileBackground.addEventListener('click', () => {
-  mobileMenu.classList.remove('active');
-  mobileBackground.classList.remove('active');
+  mobileMenu.classList.remove('mobile-header__menu_active');
+  mobileBackground.classList.remove('mobile-header__background_active');
 });
 
 

@@ -1,0 +1,470 @@
+@import 'typography.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  html {
+    min-width: 320px;
+  }
+  
+  body {
+    position: relative;
+    min-height: 100vh;
+    color: $black-color;
+  }
+  
+  h1, h2 {
+    font-family: 'playfair';
+    font-weight: normal;
+  }
+  
+  h1 {
+    font-size: 74px;
+    line-height: 85px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 48px;
+    line-height: 50px;
+    margin: 40px 0 20px 0;
+  }
+  
+  h4 {
+    font-size: 24px;
+    color: $turquoise-color;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $turquoise-color;
+    position: relative;
+    &:hover {
+      color: $turquoise-active-color;
+    }
+  }
+  
+  a.more {
+    padding-top: 10px;
+    &:after {
+      display: block;
+      position: absolute;
+      content: '→';
+      right: -20px;
+      top: 8px;
+    }
+  }
+  
+  p, li {
+    margin-bottom: 20px;
+    font-family: inherit;
+  }
+  
+  .grey-text {
+    color: $grey-color;
+  }
+  
+  .serif-text {
+    font-family: 'playfair';
+    font-weight: normal;
+    font-size: 20px;
+  }
+  
+  .regular-text {
+    font-size: 16px;
+    line-height: 20px;
+    color: $black-color;
+  }
+  
+  .main-bottom {
+    font-size: 22px;
+    color: #fff;
+    background: $turquoise-color;
+    padding: 14px 30px;
+    border-radius: 30px;
+    &::after {
+      display: none;
+    }
+    &:hover {
+      color: #fff;
+      background: $turquoise-active-color;
+    }
+  }
+  
+  .sub-buttom {
+    font-size: 22px;
+    color: $turquoise-color;
+    background: #fff;
+    border: 1px solid $turquoise-color;
+    padding: 14px 30px;
+    border-radius: 30px;
+    &::after {
+      display: none;
+    }
+    &:hover {
+      color: #fff;
+      background: $turquoise-active-color;
+    }
+  }
+  
+  .wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .center-block {
+    text-align: center;
+  }
+
+  .header {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    &__mobile-icon {
+      display: none;
+    }
+    &__burger-wrapper {
+      display: none;
+    }
+    &__logo {
+      margin-left: -18px;
+      img {
+        width: 135px;
+        height: auto;
+      }
+      &_mini {
+        img {
+          width: 87;
+          height: 87;
+        }
+      }
+    }
+    &__left-menu {
+      display: flex;
+      max-width: 900px;
+      font-size: 18px;
+    }
+    &__menu {
+      margin-top: 10px;
+    }
+    &__link {
+      margin-left: 40px;
+      color: $black-color;
+      &.active {
+        color: $turquoise-active-color;
+      }
+    }
+    &__phone {
+      font-size: 24px;
+      color: $turquoise-color;
+      margin-top: 10px;
+    }
+    &__head-phone {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  }
+
+  .mobile-header {
+    &__menu {
+      position: fixed;
+      width: 200px;
+      height: 100vh;
+      background: #fff;
+      z-index: 1000;
+      left: -220px;
+      box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4);
+      transition: left 0.5s;
+    }
+    &__menu_active {
+      display: block;
+      left: 0;    
+    }
+    &__link {
+      display: block;
+      font-size: 18px;
+      padding: 10px 20px;
+      &:first-child {
+        padding-top: 20px;
+      }
+      &.active {
+        color: $turquoise-color;
+      }
+    }
+    &__background {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      opacity: 0.7;
+      position: fixed;
+      z-index: 900;
+      &_active {
+        display: block;
+      }
+    }
+  }
+
+  .footer { 
+    background-color: $strong-grey-color;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+    }
+    &__block:not(:first-child) {
+      padding-top: 20px;
+    }
+    &__menu, &__contacts, &__social {
+      color: #fff;
+      font-size: 22px;
+    }
+    &__contacts-adress {
+      color: $turquoise-color;
+      margin-bottom: 28px;
+      position: relative;
+  
+      &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        left: -44px;
+        top: 4px;
+        background-image: url(../img/marker.svg);
+        height: 43px;
+        width: 29px;
+      }
+    }
+    &__menu {
+      nav {
+        display: flex;
+        list-style-type: none;
+      }
+      ul:first-child {
+        margin-right: 40px;
+      }
+      li {
+        list-style-type: none;
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+    &__social-text {
+      margin-bottom: 33px;
+    }
+    &_social-logoes {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__developers {
+      background-color: #000;
+      min-height: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 22px;
+      color: $turquoise-color;
+    }
+  }
+
+
+  @media (max-width: 991px) {
+
+    h1 {
+      font-size: 50px;
+      line-height: 52px;
+    }
+
+    h2 {
+      font-size: 34px;
+      line-height: 36px;
+    }
+
+    .header {
+      height: 100px;
+      margin-bottom: 0;
+  
+      &__menu {
+        display: none;
+      }
+    
+      &__phone {
+        margin: 0;
+        font-size: 18px;
+      }
+    
+      &__logo {
+        position: absolute;
+        margin: 0;
+  
+        img {
+          width: 100px;
+        }
+      }
+  
+      &__logo-secondary {
+        position: absolute;
+        margin: 0;
+      }
+    
+      &__burger-wrapper {
+        cursor: pointer;
+        display: block;
+        user-select: none;
+      }
+    
+      &__burger {
+        width: 25px;
+        height: 3px;
+        background: $turquoise-color;
+        position: relative;
+        margin-top: 6px;
+    
+        &:before {
+          content: '';
+          top: -6px;
+          display: block;
+          position: absolute;
+          z-index: -10;
+          width: 25px;
+          height: 3px;
+          background: $turquoise-color;
+        }
+    
+        &:after {
+          content: '';
+          top: 6px;
+          display: block;
+          position: absolute;
+          width: 25px;
+          height: 3px;
+          background: $turquoise-color;
+        }
+      }
+    }
+  
+    .footer {
+      &__logo {
+        img {
+          width: 90px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 767px) {
+ 
+    h1 {
+      font-size: 38px;
+      line-height: 40px;
+    }
+  
+    h2 {
+      font-size: 32px;
+      line-height: 34px;
+      margin-top: 20px;
+    }
+  
+    h4 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  
+    .serif-text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  
+    .regular-text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .header {
+      &__logo, &__logo-mini {
+  
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+    
+        img {
+          width: 60px;
+          height: auto;
+        }
+      }
+  
+      &__phone {
+        font-size: 14px;
+      }
+    }
+
+    .footer {
+
+      &__block {
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
+      }
+  
+      &__menu, &__contacts, &__social {
+        font-size: 18px;
+      }
+    
+      &__contacts-adress {
+        &:before {
+          display: none;
+        }
+      }
+    
+      &__wrapper {
+        flex-direction: column;
+      }
+    
+      &_social-logoes {
+        justify-content: space-around;
+      }
+      
+      &__menu {
+        nav {
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .header {
+
+      &__phone {
+        display: none;
+      }
+    
+      &__mobile-icon {
+        display: block;
+        padding: 0;
+        width: 22px;
+        margin-top: -4px;
+        height: auto;
+    
+        &::after {
+          display: none;
+        }
+    
+        img {
+          fill: $turquoise-color;
+        }
+      }
+    }
+  }

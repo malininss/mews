@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "playfair";
+  src: url("../fonts/Playfairdisplayregular.woff2") format("woff2"), url("../fonts/Playfairdisplayregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.we-have__list {
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  margin-bottom: 40px; }
+  .we-have__list li {
+    margin-left: 20px;
+    color: #05A099; }
+  .we-have__list a {
+    font-size: 24px;
+    margin-bottom: 10px; }
+
+.service-banner__banner {
+  height: 247px;
+  background: linear-gradient(45deg, #f8a2615c, #000000eb), url(../img/stable.png) 0 40% no-repeat;
+  position: relative; }
+  .service-banner__banner .main-bottom {
+    position: absolute;
+    right: 95px;
+    top: 50%;
+    transform: translate(0, -50%); }
+
+.service-banner__text {
+  color: #fff;
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 95px;
+  transform: translate(0, -50%); }
+  .service-banner__text h2 {
+    margin: 0; }
