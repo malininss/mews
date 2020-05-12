@@ -5,12 +5,6 @@
   font-weight: normal;
   font-style: normal; }
 
-@font-face {
-  font-family: "playfair";
-  src: url("../fonts/Playfairdisplayregular.woff2") format("woff2"), url("../fonts/Playfairdisplayregular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 * {
   margin: 0;
   padding: 0;
@@ -337,12 +331,6 @@ p, li {
     .header__mobile-icon img {
       fill: #05A099; } }
 
-@font-face {
-  font-family: "playfair";
-  src: url("../fonts/Playfairdisplayregular.woff2") format("woff2"), url("../fonts/Playfairdisplayregular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
 .we-have__list {
   max-width: 1000px;
   display: flex;
@@ -367,7 +355,7 @@ p, li {
     transform: translate(0, -50%); }
 
 .service-banner__text {
-  color: #fff;
+  color: #05A099;
   width: 30%;
   position: absolute;
   top: 50%;
@@ -418,12 +406,14 @@ p, li {
 .horsemanship {
   margin-top: 40px;
   margin-bottom: 40px; }
+  .horsemanship__description-block {
+    margin-bottom: 0; }
 
 .horsemanship-cards {
   display: flex; }
   .horsemanship-cards__card {
     text-align: center;
-    padding: 40px 20px 20px 20px; }
+    padding: 20px; }
     .horsemanship-cards__card img {
       height: 92px;
       width: auto; }

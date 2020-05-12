@@ -58,6 +58,10 @@
 .horsemanship {
   margin-top: $main-margin-top;
   margin-bottom: $main-margin-bottom;
+
+  &__description-block {
+    margin-bottom: 0;
+  }
 }
 
 .horsemanship-cards {
@@ -65,7 +69,7 @@
 
   &__card {
     text-align: center;
-    padding: 40px 20px 20px 20px;
+    padding: 20px;
   
     img {
       height: 92px;
