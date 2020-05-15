@@ -45,7 +45,7 @@ a {
   color: #05A099;
   position: relative; }
   a:hover {
-    color: #028e88; }
+    color: #008a85; }
 
 a.more {
   padding-top: 10px; }
@@ -81,12 +81,14 @@ ol {
   color: #fff;
   background: #05A099;
   padding: 14px 30px;
-  border-radius: 30px; }
+  border-radius: 30px;
+  transition: background-color 0.5s; }
   .main-bottom::after {
     display: none; }
   .main-bottom:hover {
     color: #fff;
-    background: #028e88; }
+    background: #008a85;
+    transition: none; }
 
 .sub-buttom {
   font-size: 22px;
@@ -94,15 +96,17 @@ ol {
   background: #fff;
   border: 1px solid #05A099;
   padding: 14px 30px;
-  border-radius: 30px; }
+  border-radius: 30px;
+  transition: background-color 0.5s, color 0.5s; }
   .sub-buttom::after {
     display: none; }
   .sub-buttom:hover {
     color: #fff;
-    background: #028e88; }
+    background: #008a85;
+    transition: none; }
 
 .wrapper {
-  max-width: 1400px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px; }
 
@@ -134,9 +138,23 @@ ol {
     margin-top: 10px; }
   .header__link {
     margin-left: 40px;
-    color: #383838; }
+    color: #383838;
+    position: relative; }
+    .header__link::before {
+      display: block;
+      position: absolute;
+      content: '';
+      height: 2px;
+      width: 0;
+      background-color: #05A099;
+      bottom: -5px;
+      transition: width 0.5s; }
+    .header__link:hover::before {
+      width: 100%; }
     .header__link_active {
-      color: #028e88; }
+      color: #008a85; }
+      .header__link_active::before {
+        width: 100%; }
   .header__phone {
     font-size: 24px;
     color: #05A099;
@@ -613,7 +631,7 @@ ol {
       position: absolute;
       bottom: 0;
       width: 100%;
-      max-width: 1220px;
+      max-width: 1140px;
       transform: translate(-50%, 0);
       left: 50%; }
 
@@ -647,14 +665,18 @@ ol {
       width: auto; }
     .horsemanship-cards__card:hover {
       cursor: pointer; }
-    .horsemanship-cards__card:not(:last-child) {
-      margin-right: 20px; }
+    .horsemanship-cards__card:hover .horsemanship-cards__cards-title {
+      color: #008a85; }
   .horsemanship-cards__cards-text {
     text-align: justify; }
 
+.linktest {
+  display: block; }
+
 .stables-healing {
-  max-width: 1920px;
   margin: 0 auto; }
+  .stables-healing__link:hover .stables-healing__title {
+    color: #008a85; }
   .stables-healing__card {
     display: flex;
     background-color: #F6F6F6;
@@ -668,8 +690,8 @@ ol {
     justify-content: center;
     flex-direction: column;
     margin: 0 auto; }
-    .stables-healing__description-wrap__title {
-      margin-top: -40px; }
+  .stables-healing__title {
+    margin-top: -40px; }
   .stables-healing__pic {
     display: flex; }
     .stables-healing__pic img {
@@ -778,7 +800,7 @@ ol {
   .news__card {
     display: block;
     height: 370px;
-    flex-basis: calc(25% - 15px);
+    width: calc(25% - 15px);
     text-align: center;
     margin-right: 20px; }
     .news__card:nth-child(4n) {
@@ -795,7 +817,7 @@ ol {
   .horsemanship-cards {
     flex-wrap: wrap; }
     .horsemanship-cards__card {
-      flex-basis: calc(50% - 10px);
+      width: calc(50% - 10px);
       margin-bottom: 20px; }
       .horsemanship-cards__card:not(:last-child) {
         margin-right: 0px; }

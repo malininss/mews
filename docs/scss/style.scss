@@ -29,7 +29,7 @@
       position: absolute;
       bottom: 0;
       width: 100%;
-      max-width: 1220px;
+      max-width: 1140px;
       transform: translate(-50%, 0);
       left: 50%;
     }
@@ -82,23 +82,34 @@
     &:hover {
       cursor: pointer;
     }
-  
-    &:not(:last-child) {
-      margin-right: 20px;
+
+    &:hover {
+
+      .horsemanship-cards__cards-title {
+        color: $turquoise-active-color;
+      }
     }
   }
 
   &__cards-text {
     text-align: justify;
   }
-
-
 }
 
+.linktest {
+  display: block;
+}
 .stables-healing {
-  max-width: 1920px;
   margin: 0 auto;
 
+  &__link {
+
+    &:hover {
+      .stables-healing__title {
+        color: $turquoise-active-color;
+      }
+    }
+  }
   &__card {
     display: flex;
     background-color: $light-grey-color;
@@ -106,7 +117,7 @@
   }
 
   &__pic, &__description {
-    width: 50%;
+      width: 50%;
   }
 
   &__description-wrap {
@@ -116,10 +127,10 @@
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    
-    &__title {
-      margin-top: -40px;  
-    }
+  }
+
+  &__title {
+    margin-top: -40px;
   }
 
   &__pic {
@@ -279,7 +290,7 @@
   &__card {
     display: block;
     height: 370px;
-    flex-basis: calc(25% - 15px);
+    width: calc(25% - 15px);
     text-align: center;
     margin-right: 20px;
 
@@ -308,7 +319,7 @@
     flex-wrap: wrap;
 
     &__card {
-      flex-basis: calc(50% - 10px);
+      width: calc(50% - 10px);
       margin-bottom: 20px;
   
       &:not(:last-child) {

@@ -90,12 +90,15 @@
     background: $turquoise-color;
     padding: 14px 30px;
     border-radius: 30px;
+    transition: background-color 0.5s;
+
     &::after {
       display: none;
     }
     &:hover {
       color: #fff;
       background: $turquoise-active-color;
+      transition: none;
     }
   }
   
@@ -106,17 +109,20 @@
     border: 1px solid $turquoise-color;
     padding: 14px 30px;
     border-radius: 30px;
+    transition: background-color 0.5s, color 0.5s;
+
     &::after {
       display: none;
     }
     &:hover {
       color: #fff;
       background: $turquoise-active-color;
+      transition: none;
     }
   }
   
   .wrapper {
-    max-width: 1400px;
+    max-width: 1140px;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -160,9 +166,31 @@
     &__link {
       margin-left: 40px;
       color: $black-color;
+      position: relative;
+
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        height: 2px;
+        width: 0;
+        background-color: $turquoise-color;
+        bottom: -5px;
+        transition: width 0.5s;
+      }
+
+      &:hover::before {
+        width: 100%;
+      }
+
       &_active {
         color: $turquoise-active-color;
+
+        &::before {
+          width: 100%;
+        }
       }
+
     }
     &__phone {
       font-size: 24px;
@@ -470,12 +498,6 @@
   }
   
   @media (max-width: 480px) {
-
-    // .main-description-block {
-    //   &__title {
-    //     text-align: center;
-    //   }
-    // }
 
     .main-bottom  {
       font-size: 16px;
