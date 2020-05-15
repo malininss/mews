@@ -581,6 +581,9 @@ ol {
   .contact-map__map {
     width: 50%; }
 
+.how-to-get {
+  margin-bottom: 40px; }
+
 @media (max-width: 767px) {
   .contact-map {
     flex-direction: column; }
