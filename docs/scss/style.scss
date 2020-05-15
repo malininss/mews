@@ -1,6 +1,8 @@
 @import 'typography.scss';
 @import 'main.scss';
 @import 'about.scss';
+@import 'service.scss';
+@import 'price.scss';
 
 .banner__img {
   height: 420px;
@@ -264,37 +266,24 @@
   }
 }
 
-.map {
-  background-color: $light-grey-color;
-
-  h2 {
-    padding-top: 40px;
-  }
-
-  &__img {
-    margin: 0 auto;
-    max-width: 1000px;
-  
-    img {
-      width: 100%;
-    }
-  }
-}
-
 .news {
   margin-top: $main-margin-top;
   margin-bottom: $main-margin-bottom;
   
   &__cards {
     display: flex;
+    flex-wrap: wrap;
   }
   
   &__card {
+    display: block;
     height: 370px;
+    flex-basis: calc(25% - 15px);
     text-align: center;
-  
-    &:not(:last-child) {
-      margin-right: 40px;
+    margin-right: 20px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
     }
   }
   
