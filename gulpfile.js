@@ -1,10 +1,15 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const browserSync = require('browser-sync').create();
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function(done) {
   gulp.src("docs/scss/*.scss")
+    .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest("docs/css"))
     .pipe(browserSync.stream());
 
