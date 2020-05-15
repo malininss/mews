@@ -566,6 +566,29 @@ ol {
     border-top: 12px solid #05A099;
     border-right: 8px solid transparent; } }
 
+.contact-map__buttom {
+  margin-top: 20px; }
+
+.contact-map {
+  display: flex; }
+  .contact-map__h2 {
+    margin-top: 0; }
+  .contact-map__content {
+    width: 50%;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+  .contact-map__map {
+    width: 50%; }
+
+@media (max-width: 767px) {
+  .contact-map {
+    flex-direction: column; }
+    .contact-map__content {
+      width: 100%; }
+    .contact-map__map {
+      width: 100%; } }
+
 .banner__img {
   height: 420px;
   background-color: #848484; }
