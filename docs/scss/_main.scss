@@ -246,14 +246,29 @@
 
   .footer { 
     background-color: $strong-grey-color;
+
     &__wrapper {
       display: flex;
       justify-content: space-between;
       padding-top: 20px;
     }
+
     &__block:not(:first-child) {
       padding-top: 20px;
     }
+
+    &__logo {
+      width: 172px;
+      height: 172px;
+      background: #fff;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        padding: 20px 26px 20px 16px;
+      }
+    }
+
     &__menu, &__contacts, &__social {
       color: #fff;
       font-size: 22px;
@@ -384,11 +399,8 @@
     }
   
     .footer {
-      &__logo {
-        img {
-          width: 90px;
-          height: auto;
-        }
+      &__logo-block {
+        margin: 0 auto;
       }
     }
   }
