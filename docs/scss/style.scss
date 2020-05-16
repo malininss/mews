@@ -5,9 +5,32 @@
 @import 'price.scss';
 @import 'contacts.scss';
 
-.banner__img {
-  height: 420px;
-  background-color: $grey-color;
+
+.banner {
+  display: flex;
+  height: 350px;
+  background-color: $light-grey-color;
+  padding: 0;
+
+  &__content {
+    width: 50%;
+    padding: 40px;
+  }
+
+  &__title {
+    color: #D39D7E;
+    margin-top: 0;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    width: 50%;
+    background: url(../img/banner-img.png) top left / cover no-repeat;
+    border-radius: 0 0 0 420px;
+  }
 }
 
 .horse-bg-screen {
@@ -360,6 +383,26 @@
 }
 
 @media (max-width: 767px) {
+
+  .banner {
+    height: auto;
+    flex-direction: column;
+
+    &__content {
+      width: 100%;
+      order: 2;
+    }
+
+    &__img {
+      width: 100%;
+      height: 320px;
+      order: 1;
+      border-radius: 0;
+    }
+
+  }
+
+
   .horse-bg-screen {
     height: 660px;
     &__background {
