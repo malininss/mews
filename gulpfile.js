@@ -12,8 +12,6 @@ gulp.task('sass', function(done) {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("docs/css"))
     .pipe(browserSync.stream());
-
-
   done();
 });
 
@@ -28,8 +26,6 @@ gulp.task('serve', function(done) {
     browserSync.reload();
     done();
   });
-
-
   done();
 });
 

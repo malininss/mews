@@ -5,6 +5,8 @@ if (('ontouchstart' in window) || window.DocumentTouch && document instanceof Do
   document.body.classList.add('no-touch');
 }
 
+var scroll = new SmoothScroll('a[href*="#"]');
+
 // menu
 const burgerMenu = document.querySelector('.header__burger-wrapper');
 const mobileMenu = document.querySelector('.mobile-header__menu');
