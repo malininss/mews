@@ -22,7 +22,7 @@ body {
   color: $black-color;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'playfair';
   font-weight: normal;
 }
@@ -39,6 +39,13 @@ h2 {
   margin: 40px 0 20px 0;
 }
 
+h3 {
+  font-size: 28px;
+  line-height: 32px;
+  margin: 20px 0 10px 0;
+  color: $turquoise-color;
+}
+
 h4 {
   font-size: 24px;
   color: $turquoise-color;
@@ -51,6 +58,7 @@ a {
   text-decoration: none;
   color: $turquoise-color;
   position: relative;
+
   &:hover {
     color: $turquoise-active-color;
   }
@@ -58,6 +66,7 @@ a {
 
 a.more {
   padding-top: 10px;
+
   &:after {
     display: block;
     position: absolute;
@@ -143,18 +152,22 @@ ol {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+
   &__mobile-icon {
     display: none;
   }
+
   &__burger-wrapper {
     display: none;
   }
+
   &__logo {
     margin-left: -18px;
     img {
       width: 135px;
       height: auto;
     }
+
     &_mini {
       img {
         width: 87px;
@@ -162,14 +175,17 @@ ol {
       }
     }
   }
+
   &__left-menu {
     display: flex;
     max-width: 900px;
     font-size: 18px;
   }
+
   &__menu {
     margin-top: 10px;
   }
+
   &__link {
     margin-left: 40px;
     color: $black-color;
@@ -199,11 +215,13 @@ ol {
     }
 
   }
+
   &__phone {
     font-size: 24px;
     color: $turquoise-color;
     margin-top: 10px;
   }
+
   &__head-phone {
     font-weight: bold;
     margin-bottom: 5px;
@@ -211,6 +229,7 @@ ol {
 }
 
 .mobile-header {
+
   &__menu {
     position: fixed;
     width: 200px;
@@ -221,10 +240,12 @@ ol {
     box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.4);
     transition: left 0.5s;
   }
+
   &__menu_active {
     display: block;
     left: 0;    
   }
+
   &__link {
     display: block;
     font-size: 18px;
@@ -237,6 +258,7 @@ ol {
       color: $turquoise-color;
     }
   }
+
   &__background {
     display: none;
     width: 100%;
@@ -252,6 +274,7 @@ ol {
 }
 
 .footer { 
+  margin-top: 40px;
   background-color: $strong-grey-color;
 
   &__wrapper {
@@ -260,8 +283,16 @@ ol {
     padding: 20px;
   }
 
-  &__block:not(:first-child) {
-    padding-top: 20px;
+  &__block {
+    &:not(:first-child) {
+      padding-top: 20px;
+
+      margin: 0 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__logo {
@@ -278,9 +309,17 @@ ol {
 
   &__menu, &__contacts, &__social {
     color: #fff;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 26px;
   }
+  
+
+  &__contacts-phone {
+    a {
+      color: #fff;
+    }
+  }
+
   &__contacts-adress {
     color: $turquoise-color;
     margin-bottom: 28px;
@@ -297,14 +336,18 @@ ol {
       width: 29px;
     }
   }
+
   &__menu {
+
     nav {
       display: flex;
       list-style-type: none;
     }
+
     ul:first-child {
       margin-right: 40px;
     }
+
     li {
       list-style-type: none;
       &:not(:last-child) {
@@ -312,13 +355,24 @@ ol {
       }
     }
   }
+
+  &__menu-link {
+    color: #fff;
+  }
+
   &__social-text {
     margin-bottom: 33px;
   }
+
   &_social-logoes {
     display: flex;
     justify-content: space-between;
+
+    img {
+      width: 40px;
+    }
   }
+
   &__developers {
     background-color: #000;
     min-height: 40px;
@@ -406,8 +460,12 @@ ol {
   }
 
   .footer {
-    &__logo-block {
-      margin: 0 auto;
+
+    &__contacts-adress {
+      
+      &:before {
+        display: none;
+      }
     }
   }
 }
@@ -424,6 +482,12 @@ ol {
     font-size: 32px;
     line-height: 34px;
     margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 32px;
+    color: $turquoise-color;
   }
 
   h4 {
@@ -467,20 +531,26 @@ ol {
 
   .footer {
 
+    &__logo {
+      margin: 0 auto;
+    }
+
     &__block {
       text-align: center;
       padding: 20px;
       font-size: 16px;
+      
+      &:not(:first-child) {
+        margin: 0;
+      }
     }
 
     &__menu, &__contacts, &__social {
       font-size: 18px;
     }
-  
-    &__contacts-adress {
-      &:before {
-        display: none;
-      }
+
+    &__contacts {
+      margin-left: 0;
     }
   
     &__wrapper {

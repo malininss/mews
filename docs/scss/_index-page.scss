@@ -115,6 +115,7 @@
 .linktest {
   display: block;
 }
+
 .stables-healing {
   margin: 0 auto;
 
@@ -126,6 +127,7 @@
       }
     }
   }
+
   &__card {
     display: flex;
     background-color: $light-grey-color;
@@ -345,6 +347,7 @@
   }
 
   .news {
+
     &__cards {
       flex-wrap: wrap;
     }
@@ -365,6 +368,7 @@
   }
 
   .stables-healing {
+
     &__title {
       margin-top: 0;
     }
@@ -394,6 +398,7 @@
 
   .horse-bg-screen {
     height: 660px;
+
     &__background {
       min-height: 0;
       height: 660px;
@@ -401,6 +406,7 @@
   }
 
   .horsemanship {
+
     &__card {
       padding: 0;
       &:nth-child(odd) {
@@ -410,6 +416,7 @@
   }
 
   .stables-healing {
+
     &__card {
       flex-wrap: wrap;
       max-height: none;
@@ -467,8 +474,4 @@
       }
     }
   }
-}
-
-@media (max-width: 480px) {
-
 }
