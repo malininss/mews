@@ -205,7 +205,7 @@ ol {
       transition: width 0.5s;
     }
 
-    &:hover::before .no-touch{
+    &:hover::before{
       width: 100%;
     }
 
