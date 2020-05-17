@@ -1,3 +1,5 @@
+document.addEventListener("touchstart", function(){}, true);
+
 // menu
 const burgerMenu = document.querySelector('.header__burger-wrapper');
 const mobileMenu = document.querySelector('.mobile-header__menu');
@@ -14,10 +16,7 @@ mobileBackground.addEventListener('click', () => {
   mobileBackground.classList.remove('mobile-header__background_active');
 });
 
-
-
 //gallery
-
 const prevArrow = document.querySelector('.gallery__prev-arrow');
 const nextArrow = document.querySelector('.gallery__next-arrow');
 
@@ -49,7 +48,6 @@ if (mainPicture && smallPictures && prevArrow && nextArrow) {
 
   updateActivePicture();
 
-
   smallPictures.forEach((elem) => {
     elem.addEventListener('click', (event) => {
       activePictureIndex = smallPictures.indexOf(event.target.parentElement)
@@ -71,11 +69,8 @@ if (mainPicture && smallPictures && prevArrow && nextArrow) {
 
 
 // price;
-
 const priceLinks = Array.from(document.querySelectorAll('.price__link-container'));
 const priceDescriptionContainers = Array.from(document.querySelectorAll('.price__description-container'));
-
-// let activePriceInex = 0;
 
 const updateActivePrice = (activePriceIndex = 0) => {
   priceLinks.forEach((elem, index) => {
@@ -94,7 +89,6 @@ const updateActivePrice = (activePriceIndex = 0) => {
   priceDescriptionContainers[activePriceIndex].classList.add('price__description-container_active');
 
 };
-
 
 priceLinks.forEach(elem => {
   elem.addEventListener('click', (event) => {
