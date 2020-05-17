@@ -47,13 +47,10 @@
   }
 }
 
-
-@media (max-width: 991px) {
-
-}
-
 @media (max-width: 767px) {
+
   .services {
+    
     &__card {
       width: calc(50% - 10px);
 
