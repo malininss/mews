@@ -6,7 +6,7 @@
   }
 
   &__card {
-    background: linear-gradient(45deg, #000000eb, #f8a2615c);
+    background: linear-gradient(45deg, #100800eb, #f8a2615c);
     background-size: cover;
     width: calc(33.33333% - 13.5px);
     margin-bottom: 20px;
@@ -24,10 +24,6 @@
       margin-right: 0;
     }
   }
-
-  // &__card-title {
-
-  // }
 
   &__card-text {
     margin-bottom: 20px;
@@ -83,7 +79,6 @@
       &:nth-child(3n) {
         margin-right: 0;
       }
-      
     }
   }
 }
