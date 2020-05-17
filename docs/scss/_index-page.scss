@@ -94,12 +94,9 @@
       height: 92px;
       width: auto;
     }
-  
-    &:hover {
-      cursor: pointer;
-    }
 
-    &:hover {
+    &:hover .no-touch{
+      cursor: pointer;
 
       .horsemanship-cards__cards-title {
         color: $turquoise-active-color;
@@ -121,7 +118,7 @@
 
   &__link {
 
-    &:hover {
+    &:hover .no-touch {
       .stables-healing__title {
         color: $turquoise-active-color;
       }
@@ -209,7 +206,7 @@
     transition: border 0.2s;
     cursor: pointer;
   
-    &:hover {
+    &:hover .no-touch{
       border-top: 25px solid transparent;
       border-right: 35px solid #00fff47d;
       border-bottom: 25px solid transparent;
@@ -230,7 +227,7 @@
     transition: border 0.2s;
     cursor: pointer;
   
-    &:hover {
+    &:hover .no-touch {
       border-top: 25px solid transparent;
       border-left: 35px solid #00fff47d;
       border-bottom: 25px solid transparent;
@@ -261,7 +258,7 @@
       filter: opacity(1);
     }
   
-    &:hover {
+    &:hover .no-touch {
       filter: opacity(1);
     }
   
